@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             labelCurrentOperation = new Label();
             tbResults = new TextBox();
             btnEqualTo = new Button();
@@ -60,7 +60,7 @@
             labelCurrentOperation.Location = new Point(8, 12);
             labelCurrentOperation.Margin = new Padding(4, 0, 4, 0);
             labelCurrentOperation.Name = "labelCurrentOperation";
-            labelCurrentOperation.Size = new Size(0, 29);
+            labelCurrentOperation.Size = new Size(0, 24);
             labelCurrentOperation.TabIndex = 41;
             // 
             // tbResults
@@ -69,7 +69,7 @@
             tbResults.Location = new Point(16, 39);
             tbResults.Margin = new Padding(4);
             tbResults.Name = "tbResults";
-            tbResults.Size = new Size(341, 34);
+            tbResults.Size = new Size(341, 29);
             tbResults.TabIndex = 40;
             tbResults.Text = "0";
             tbResults.TextAlign = HorizontalAlignment.Right;
@@ -108,6 +108,7 @@
             button17.TabIndex = 37;
             button17.Text = ".";
             button17.UseVisualStyleBackColor = true;
+            button17.Click += btnNumbers_click;
             // 
             // button19
             // 
@@ -291,7 +292,7 @@
             // 
             // Calculator
             // 
-            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(407, 342);
             Controls.Add(labelCurrentOperation);

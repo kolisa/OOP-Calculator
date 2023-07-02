@@ -17,7 +17,7 @@ namespace OOP_Calculator
         {
             if ((tbResults.Text == "0") || (isOperationPerformed))
                 tbResults.Clear();
-           
+
             if (isNewCalc) { tbResults.Clear(); resultValue = 0; }
             isOperationPerformed = false;
             Button button = (Button)sender;
@@ -38,7 +38,7 @@ namespace OOP_Calculator
 
             if (resultValue != 0)
             {
-               
+
                 operationPerformed = button.Text;
                 labelCurrentOperation.Text = resultValue + " " + operationPerformed;
                 isOperationPerformed = true;
