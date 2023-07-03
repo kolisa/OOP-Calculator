@@ -12,13 +12,14 @@ namespace OOP_Calculator
         {
             InitializeComponent();
         }
-
+        //when numeric value has been click this method is triggered 
         private void btnNumbers_click(object sender, EventArgs e)
         {
             if ((tbResults.Text == "0") || (isOperationPerformed))
                 tbResults.Clear();
 
             if (isNewCalc) { tbResults.Clear(); resultValue = 0; }
+
             isOperationPerformed = false;
             Button button = (Button)sender;
             if (button.Text == ".")
@@ -31,21 +32,19 @@ namespace OOP_Calculator
                 tbResults.Text = tbResults.Text + button.Text;
             isNewCalc = false;
         }
-
+        //method trigger when a math operator has been clicked
         private void operator_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
 
             if (resultValue != 0)
             {
-
                 operationPerformed = button.Text;
                 labelCurrentOperation.Text = resultValue + " " + operationPerformed;
                 isOperationPerformed = true;
             }
             else
             {
-
                 operationPerformed = button.Text;
                 resultValue = Double.Parse(tbResults.Text);
                 labelCurrentOperation.Text = resultValue + " " + operationPerformed;
@@ -53,7 +52,7 @@ namespace OOP_Calculator
             }
             isNewCalc = false;
         }
-
+        //When equal has been clicked and see results
         private void btnEqualTo_Click(object sender, EventArgs e)
         {
 

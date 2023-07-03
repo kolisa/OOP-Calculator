@@ -15,7 +15,7 @@ namespace OOP_Calculator.Classes
         }
         public override double Calculate()
         {
-            return _firstName + _secondNum;
+            return (_firstName + _secondNum);
         }
     }
 }
